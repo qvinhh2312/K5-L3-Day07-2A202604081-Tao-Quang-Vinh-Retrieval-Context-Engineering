@@ -1,0 +1,25 @@
+{
+  "status": "frozen",
+  "selected_config": "bm25_filter_selected",
+  "method": "BM25 Okapi",
+  "parameters": {
+    "k1": 1.5,
+    "b": 0.75,
+    "top_k": 3,
+    "context_budget_chars": 800,
+    "metadata_filter": "apply only when explicitly present in the user query benchmark"
+  },
+  "selection_rule": "Choose the highest dev Context Evidence Rate; on a tie, choose the smaller average context size to limit downstream LLM tokens.",
+  "dev_basis": {
+    "context_evidence": "12/20",
+    "average_context_chars": 637.4,
+    "median_query_ms": 1.649,
+    "filter_compliance": "5/5",
+    "comparison": "Hybrid top_k=5, budget=1200 also reached 12/20, with 952.4 average context chars."
+  },
+  "benchmark_files_sha256": {
+    "data/benchmark_dev.json": "49696767d6d565c7f2df948f1ec7f9db3e5d5a6b1947673a0eb85802671edcb0",
+    "data/benchmark_test.json": "ba4b76f1f0457cf43ee4c0b1b4b4200e57fd717e2f28cdcf3b31481fc01f2e9c"
+  },
+  "test_policy": "Run only the BM25 baseline and this selected configuration; do not adjust after inspecting test results."
+}

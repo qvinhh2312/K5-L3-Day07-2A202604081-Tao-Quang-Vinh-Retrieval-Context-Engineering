@@ -1,0 +1,42 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "max_seq_length": 256,
+  "sentence_transformers": "6.3.0",
+  "python": "3.14.7",
+  "pdf_sha256": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+  "counted_pages": 42,
+  "cost_usd": 0.0,
+  "strategies": {
+    "A": {
+      "n_chunks": 233,
+      "total_chars": 109214,
+      "min": 51,
+      "median": 500,
+      "mean": 468.7,
+      "p90": 500,
+      "max": 500,
+      "rows_before": 0,
+      "rows_after": 233,
+      "embed_seconds": 4.24,
+      "db_seconds": 0.11
+    },
+    "B": {
+      "n_chunks": 175,
+      "total_chars": 100323,
+      "min": 47,
+      "median": 607,
+      "mean": 573.3,
+      "p90": 791,
+      "max": 799,
+      "rows_before": 0,
+      "rows_after": 175,
+      "embed_seconds": 3.74,
+      "db_seconds": 0.11
+    }
+  },
+  "postgresql": "16.16 (Debian 16.16-1.pgdg12+1)",
+  "pgvector": "0.8.7",
+  "psycopg": "3.3.8",
+  "total_seconds": 85.46
+}
