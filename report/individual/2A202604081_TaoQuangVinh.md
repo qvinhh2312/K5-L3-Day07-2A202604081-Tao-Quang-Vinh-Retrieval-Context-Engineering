@@ -52,6 +52,7 @@ Lệnh chạy agent sau khi cấu hình provider trong `.env`:
 
 ```powershell
 .\.venv\Scripts\python.exe -m src.run_agent_eval --split dev --config bm25_filter_selected
+.\.venv\Scripts\python.exe -m src.run_agent_eval --split test --final --config bm25_baseline
 .\.venv\Scripts\python.exe -m src.run_agent_eval --split test --final --config bm25_filter_selected
 .\.venv\Scripts\python.exe .\scripts\prepare_agent_review.py --split test --traces .\results\agent\test_bm25_filter_selected.json --outdir .\results\agent\review-test
 ```

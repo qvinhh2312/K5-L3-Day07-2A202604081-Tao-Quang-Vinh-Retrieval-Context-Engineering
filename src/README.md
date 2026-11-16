@@ -26,6 +26,7 @@ python -m src.run_retrieval --split test --final
 
 ```powershell
 python -m src.run_agent_eval --split dev --config bm25_filter_selected
+python -m src.run_agent_eval --split test --final --config bm25_baseline
 python -m src.run_agent_eval --split test --final --config bm25_filter_selected
 python scripts/prepare_agent_review.py --split test --traces results/agent/test_bm25_filter_selected.json --outdir results/agent/review-test
 ```

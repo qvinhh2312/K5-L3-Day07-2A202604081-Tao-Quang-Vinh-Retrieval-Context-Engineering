@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / "starter"))
 
 from agentic import run_agent
 from src.agent import OpenAICompatibleController
+from src.frozen import verify_freeze
 from src.retrievers import BM25
 
 
@@ -25,9 +26,9 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.split == "test":
-        freeze = ROOT / "results" / "freeze-config.json"
-        if not args.final or not freeze.exists():
+        if not args.final:
             parser.error("test requires --final and results/freeze-config.json after config freeze")
+        verify_freeze(ROOT)
     load_dotenv(ROOT / ".env")
     model = os.getenv("AGENT_MODEL", "gpt-4o-mini")
     chunks = json.loads((ROOT / "data" / "chunks_B.json").read_text(encoding="utf-8"))
@@ -41,13 +42,15 @@ def main() -> None:
             result = run_agent(case["question"], controller, retriever,
                                filters=case.get("filter") if args.config == "bm25_filter_selected" else None,
                                max_searches=4, top_k=3, budget=800)
-            traces.append({"query_id": case["id"], **result, "model": model,
+            traces.append({"query_id": case["id"], "question": case["question"],
+                           "answerable": case["answerable"], **result, "model": model,
                            "total_tokens": controller.total_tokens,
                            "prompt_tokens": controller.prompt_tokens,
                            "completion_tokens": controller.completion_tokens,
                            "config": args.config})
         except Exception as exc:
-            traces.append({"query_id": case["id"], "status": "error", "error": str(exc),
+            traces.append({"query_id": case["id"], "question": case["question"],
+                           "answerable": case["answerable"], "status": "error", "error": str(exc),
                            "events": [], "citations": [], "model": model,
                            "total_tokens": controller.total_tokens if controller else 0,
                            "prompt_tokens": controller.prompt_tokens if controller else 0,

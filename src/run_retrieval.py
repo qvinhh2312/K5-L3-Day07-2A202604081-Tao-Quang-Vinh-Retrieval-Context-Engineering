@@ -11,6 +11,7 @@ if str(ROOT) not in sys.path:
 from src.dense import Dense
 from src.metrics import run
 from src.retrievers import BM25, Hybrid
+from src.frozen import verify_freeze
 from baseline import TfidfIndex
 
 
@@ -36,9 +37,9 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.split == "test":
-        freeze = ROOT / "results" / "freeze-config.json"
-        if not args.final or not freeze.exists():
+        if not args.final:
             parser.error("test requires --final and results/freeze-config.json after config freeze")
+        verify_freeze(ROOT)
     chunks = json.loads((ROOT / "data" / "chunks_B.json").read_text(encoding="utf-8"))
     cases = json.loads((ROOT / "data" / f"benchmark_{args.split}.json").read_text(encoding="utf-8"))
     questions = [q for q in cases if q["answerable"]]
