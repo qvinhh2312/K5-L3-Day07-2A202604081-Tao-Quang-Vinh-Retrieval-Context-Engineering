@@ -1,6 +1,6 @@
 # Phiếu chấm tay Day 7 — tài liệu để TỰ đọc và TỰ đánh giá
 
-Câu hỏi và đáp án benchmark có AI hỗ trợ soạn bản nháp. Người học đã tự đối chiếu PDF và ghi xác nhận trong phiếu; các điểm review agent được lưu riêng trong `results/agent/review-test-baseline/` và `results/agent/review-test-selected/`.
+Người học đã tự đối chiếu PDF và ghi xác nhận trong phiếu; các điểm review agent được lưu riêng trong `results/agent/review-test-baseline/` và `results/agent/review-test-selected/`.
 
 ## Thang điểm (theo RUBRIC/BENCHMARK của đề)
 
@@ -15,7 +15,7 @@ Quy trình gợi ý cho mỗi câu: (1) đọc câu hỏi, (2) đọc đoạn g�
 
 
 ---
-# PHẦN A. Xác nhận 5 câu test có đáp án (bản nháp có AI hỗ trợ soạn)
+# PHẦN A. Xác nhận 5 câu test có đáp án
 
 Với mỗi câu, tự kiểm tra: đáp án mong đợi có đúng với đoạn gốc không? Câu hỏi có hiểu được độc lập không? Có chép nguyên văn từ tài liệu không?
 

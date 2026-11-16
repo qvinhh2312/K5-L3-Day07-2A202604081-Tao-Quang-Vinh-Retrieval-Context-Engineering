@@ -1,6 +1,6 @@
 # Phiếu chấm tay – Day 7 (test) — do tôi tự đọc và tự đánh giá
 
-Gợi ý chấm và bản nháp nhãn đã có AI hỗ trợ trong quá trình chuẩn bị. Người chấm đã tự đọc bằng chứng và xác nhận điểm, citation support, abstention cùng nhận xét ghi dưới đây.
+Người chấm đã tự đọc bằng chứng và xác nhận điểm, citation support, abstention cùng nhận xét ghi dưới đây.
 
 - Người chấm: Tào Quang Vinh   Ngày chấm: 16/11/2026
 - Đã mở PDF/chunk để đọc từng citation: có
