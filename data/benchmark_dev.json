@@ -13,7 +13,6 @@
         "evidence": "risk refers to the composite measure of an event’s probability of occurring and the magnitude or degree of the consequences of the corresponding event"
       }
     ],
-    "filter": null,
     "type": "truc_tiep"
   },
   {
@@ -30,7 +29,6 @@
         "evidence": "the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE."
       }
     ],
-    "filter": null,
     "type": "truc_tiep"
   },
   {
@@ -47,7 +45,6 @@
         "evidence": "Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics"
       }
     ],
-    "filter": null,
     "type": "dien_dat_lai"
   },
   {
@@ -64,7 +61,6 @@
         "evidence": "unacceptable negative risk levels – such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present – development and deployment should cease in a safe manner until risks can be sufficiently managed"
       }
     ],
-    "filter": null,
     "type": "dieu_kien"
   },
   {
@@ -81,10 +77,10 @@
         "evidence": "AI actors in this category include system integrators, software developers, end users, operators and practitioners, evaluators, and domain experts with expertise in human factors, socio-cultural analysis, and governance"
       }
     ],
-    "filter": {
+    "type": "filter",
+    "oracle_filter": {
       "part": "appendix"
-    },
-    "type": "filter"
+    }
   },
   {
     "id": "q06",
@@ -100,7 +96,6 @@
         "evidence": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities."
       }
     ],
-    "filter": null,
     "type": "bang"
   },
   {
@@ -117,7 +112,6 @@
         "evidence": "Risk response options can include mitigating, transferring, avoiding, or accepting."
       }
     ],
-    "filter": null,
     "type": "bang"
   },
   {
@@ -134,10 +128,10 @@
         "evidence": "Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology"
       }
     ],
-    "filter": {
+    "type": "filter",
+    "oracle_filter": {
       "part": "part1"
-    },
-    "type": "filter"
+    }
   },
   {
     "id": "q09",
@@ -153,10 +147,10 @@
         "evidence": "TEVV tasks for operations involve ongoing monitoring for periodic updates, testing, and subject matter expert (SME) recalibration of models"
       }
     ],
-    "filter": {
+    "type": "filter",
+    "oracle_filter": {
       "part": "appendix"
-    },
-    "type": "filter"
+    }
   },
   {
     "id": "q10",
@@ -172,7 +166,6 @@
         "evidence": "an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments"
       }
     ],
-    "filter": null,
     "type": "truc_tiep"
   },
   {
@@ -189,7 +182,6 @@
         "evidence": "Systems in which harmful biases are mitigated are not necessarily fair."
       }
     ],
-    "filter": null,
     "type": "dieu_kien"
   },
   {
@@ -206,7 +198,6 @@
         "evidence": "AI systems may require more frequent maintenance and triggers for conducting corrective maintenance due to data, model, or concept drift."
       }
     ],
-    "filter": null,
     "type": "dien_dat_lai"
   },
   {
@@ -223,7 +214,6 @@
         "evidence": "Be outcome-focused and non-prescriptive. The Framework should provide a catalog of outcomes and approaches rather than prescribe one-size-fits-all requirements."
       }
     ],
-    "filter": null,
     "type": "dien_dat_lai"
   },
   {
@@ -240,7 +230,6 @@
         "evidence": "An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals."
       }
     ],
-    "filter": null,
     "type": "dien_dat_lai"
   },
   {
@@ -257,7 +246,6 @@
         "evidence": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly."
       }
     ],
-    "filter": null,
     "type": "bang"
   },
   {
@@ -274,7 +262,6 @@
         "evidence": "While resilience is the ability to return to normal function after an unexpected adverse event, security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks."
       }
     ],
-    "filter": null,
     "type": "phan_biet"
   },
   {
@@ -291,10 +278,10 @@
         "evidence": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented."
       }
     ],
-    "filter": {
+    "type": "filter",
+    "oracle_filter": {
       "part": "part2"
-    },
-    "type": "filter"
+    }
   },
   {
     "id": "q18",
@@ -310,10 +297,10 @@
         "evidence": "Under certain conditions – for example, in perceptual-based judgment tasks – the AI part of the human-AI interaction can amplify human biases, leading to more biased decisions than the AI or human alone."
       }
     ],
-    "filter": {
+    "type": "filter",
+    "oracle_filter": {
       "part": "appendix"
-    },
-    "type": "filter"
+    }
   },
   {
     "id": "q19",
@@ -329,7 +316,6 @@
         "evidence": "These individuals do not necessarily interact with the deployed system or application."
       }
     ],
-    "filter": null,
     "type": "dieu_kien"
   },
   {
@@ -346,7 +332,6 @@
         "evidence": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics."
       }
     ],
-    "filter": null,
     "type": "bang"
   },
   {
@@ -355,8 +340,7 @@
     "answerable": false,
     "question": "Which GDPR articles does the AI RMF map its privacy subcategories to?",
     "gold": [],
-    "absence_reason": "Đã tìm GDPR trên toàn bộ 42 trang nội dung (0 lần); phần Privacy (PDF page 22) bàn về nguyên tắc và rủi ro quyền riêng tư, không nêu điều khoản GDPR.",
-    "filter": null
+    "absence_reason": "Đã tìm GDPR trên toàn bộ 42 trang nội dung (0 lần); phần Privacy (PDF page 22) bàn về nguyên tắc và rủi ro quyền riêng tư, không nêu điều khoản GDPR."
   },
   {
     "id": "u-dev-02",
@@ -364,7 +348,6 @@
     "answerable": false,
     "question": "Which differential privacy algorithm does the AI RMF recommend for protecting training data?",
     "gold": [],
-    "absence_reason": "Đã tìm cụm differential privacy trên toàn bộ 42 trang nội dung (0 lần); tài liệu nói về privacy-enhancing techniques nhưng không chỉ định thuật toán differential privacy.",
-    "filter": null
+    "absence_reason": "Đã tìm cụm differential privacy trên toàn bộ 42 trang nội dung (0 lần); tài liệu nói về privacy-enhancing techniques nhưng không chỉ định thuật toán differential privacy."
   }
 ]

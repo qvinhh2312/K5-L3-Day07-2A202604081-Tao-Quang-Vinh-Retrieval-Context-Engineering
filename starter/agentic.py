@@ -6,6 +6,8 @@ model providers differ. Never use fake adapters to report benchmark quality.
 from typing import Any, Protocol
 from baseline import pack_context
 
+ABSTAIN = "Không đủ bằng chứng để trả lời."
+
 
 class Controller(Protocol):
     def decide(self, question: str, history: list[dict[str, Any]]) -> dict[str, Any]:
@@ -51,17 +53,23 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
             query = action.get('query')
             if not isinstance(query, str) or not query.strip():
                 raise ValueError('search query phải là chuỗi không rỗng')
+            prior_queries = [e['query'] for e in events if e['event'] == 'search']
+            if query.strip().casefold() in {q.strip().casefold() for q in prior_queries}:
+                events.append({'event': 'repeated_query_blocked', 'query': query})
+                return {'status': 'abstain', 'answer': ABSTAIN, 'citations': [], 'events': events}
             results = retriever.search(query, filters=filters, top_k=top_k)
             if len(results) > top_k or len({r['id'] for r in results}) != len(results):
                 raise ValueError('retriever phải trả tối đa top_k chunk ID duy nhất')
             candidates.extend(results)
             context, ids = pack_context(candidates, budget=budget)
             chunks = {c['id']: c for c in candidates if c['id'] in ids}
+            previous_ids = set(history[-1]['context_ids']) if history else set()
+            new_ids = [chunk_id for chunk_id in ids if chunk_id not in previous_ids]
             events.append({'event': 'search', 'query': query, 'filter': filters, 'results': results,
-                           'context': context, 'context_ids': ids})
+                           'new_context_ids': new_ids, 'context': context, 'context_ids': ids})
             # Send only the latest cumulative context; avoid multiplying the budget.
             history = [{'tool': 'search', 'queries': [e['query'] for e in events if e['event'] == 'search'],
-                        'context': context, 'context_ids': ids}]
+                        'context': context, 'context_ids': ids, 'new_context_ids': len(new_ids)}]
         elif action.get('action') == 'answer':
             answer, citations = action.get('answer'), action.get('citations')
             if not isinstance(answer, str) or not isinstance(citations, list) or any(not isinstance(i, str) for i in citations):
@@ -69,7 +77,9 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
             valid = bool(answer.strip() and citations and all(i in chunks and f'[{i}]' in answer for i in citations))
             if valid:
                 return {'status': 'answered', 'answer': answer, 'citations': citations, 'events': events + [{'event': 'answer'}]}
-            return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events + [{'event': 'invalid_or_missing_citations'}]}
+            return {'status': 'abstain', 'answer': ABSTAIN, 'citations': [],
+                    'candidate_answer': answer, 'candidate_citations': citations,
+                    'events': events + [{'event': 'invalid_or_missing_citations'}]}
         else:
             raise ValueError('action phải là search hoặc answer')
     return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events}

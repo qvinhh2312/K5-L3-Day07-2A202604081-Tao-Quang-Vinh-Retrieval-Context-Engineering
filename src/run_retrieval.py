@@ -1,4 +1,3 @@
-"""Run dense, BM25, and hybrid retrieval comparisons on a split."""
 import argparse
 import json
 import sys
@@ -47,21 +46,28 @@ def main() -> None:
     if args.split == "test":
         # Only frozen baseline and selected configuration are allowed on test.
         retrievers = {"bm25": lexical}
-        configs = [("bm25_baseline", 3, 800), ("selected_bm25_filter", 3, 800)]
+        configs = [("bm25_baseline", 3, 800), ("bm25_selected_frozen", 3, 2500)]
     else:
         dense = Dense(index="B")
         retrievers = {"tfidf": Tfidf(chunks), "dense": dense, "bm25": lexical,
                       "hybrid_rrf": Hybrid(dense, lexical, pool=20, k=60)}
         # Two single-variable follow-up experiments over the hybrid baseline.
         configs = [(name, 3, 800) for name in retrievers]
-        configs += [("hybrid_rrf_top5", 5, 800), ("hybrid_rrf_top5_budget1200", 5, 1200)]
+        configs += [("hybrid_rrf_top5", 5, 800), ("hybrid_rrf_top5_budget1200", 5, 1200),
+                    ("bm25_budget1200_exploratory", 3, 1200),
+                    ("bm25_budget2500_exploratory", 3, 2500)]
     summaries, all_traces = [], []
     for label, top_k, budget in configs:
         if args.split == "test":
             base = "bm25"
-            use_filter = label == "selected_bm25_filter"
+            use_filter = label == "bm25_query_filter_selected"
         else:
-            base = "hybrid_rrf" if label.startswith("hybrid_rrf") else label
+            if label.startswith("hybrid_rrf"):
+                base = "hybrid_rrf"
+            elif label.startswith("bm25_budget"):
+                base = "bm25"
+            else:
+                base = label
             use_filter = False
         summary, traces = run(retrievers[base], questions, top_k=top_k, budget=budget,
                               use_filter=use_filter)
@@ -74,10 +80,10 @@ def main() -> None:
         for label in ("tfidf", "dense", "bm25", "hybrid_rrf"):
             base = "hybrid_rrf" if label == "hybrid_rrf" else label
             summary, traces = run(retrievers[base], questions, top_k=3, budget=800, use_filter=True)
-            summary.update({"config": f"{label}_with_filter", "top_k": 3, "budget_chars": 800,
+            summary.update({"config": f"{label}_with_query_filters", "top_k": 3, "budget_chars": 800,
                             "use_filter": True, "split": args.split})
             summaries.append(summary)
-            all_traces.extend({**t, "config": f"{label}_with_filter", "use_filter": True} for t in traces)
+            all_traces.extend({**t, "config": f"{label}_with_query_filters", "use_filter": True} for t in traces)
     output = args.output or ROOT / "results" / f"retrieval_{args.split}.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps({"summaries": summaries, "traces": all_traces}, ensure_ascii=False, indent=2) + "\n",

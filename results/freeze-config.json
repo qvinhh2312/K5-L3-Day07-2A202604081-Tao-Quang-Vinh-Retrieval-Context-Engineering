@@ -1,25 +1,72 @@
 {
   "status": "frozen",
-  "selected_config": "bm25_filter_selected",
+  "selected_config": "bm25_query_filter_selected",
   "method": "BM25 Okapi",
   "parameters": {
     "k1": 1.5,
     "b": 0.75,
     "top_k": 3,
     "context_budget_chars": 800,
-    "metadata_filter": "apply only when explicitly present in the user query benchmark"
+    "metadata_filter": "infer only when Part/Appendix is explicit in question text"
   },
-  "selection_rule": "Choose the highest dev Context Evidence Rate; on a tie, choose the smaller average context size to limit downstream LLM tokens.",
+  "selection_rule": "Keep the previously frozen BM25 top-3, 800-character retrieval configuration; this correction changes agent behavior only. The historical oracle-filter advantage is excluded.",
   "dev_basis": {
-    "context_evidence": "12/20",
-    "average_context_chars": 637.4,
-    "median_query_ms": 1.649,
-    "filter_compliance": "5/5",
-    "comparison": "Hybrid top_k=5, budget=1200 also reached 12/20, with 952.4 average context chars."
+    "context_evidence": "11/20 without oracle filters",
+    "hit1": "14/20",
+    "evidence_hit3": "16/20",
+    "median_query_ms": 0.562,
+    "filter_questions": 0,
+    "comparison": "BM25 budget 1200/2500 were exploratory dev-only after the earlier freeze and do not change selected parameters."
   },
   "benchmark_files_sha256": {
-    "data/benchmark_dev.json": "49696767d6d565c7f2df948f1ec7f9db3e5d5a6b1947673a0eb85802671edcb0",
-    "data/benchmark_test.json": "ba4b76f1f0457cf43ee4c0b1b4b4200e57fd717e2f28cdcf3b31481fc01f2e9c"
+    "data/benchmark_dev.json": "345b0f408781ba5eace469b07b81fa844ef1b50ada3c129178aeb8c0f3d26f10",
+    "data/benchmark_test.json": "4920072c4fb9bca6e09c55d6209264e64e79b5b59127f7f98123dfd0dd035e00"
   },
-  "test_policy": "Run only the BM25 baseline and this selected configuration; do not adjust after inspecting test results."
+  "test_policy": "Retrieval test was inspected before this agent-only change. Baseline and selected agent were each run once after freeze. Do not tune from these results; audit only.",
+  "test_eligible": true,
+  "history_note": "Benchmark schema corrected to separate oracle_filter from runtime filters. On q21/q25, explicit query filters reproduce prior selected behavior. No dev query includes an explicit section scope.",
+  "agent_dev": {
+    "model": "gpt-4o-mini via OpenRouter",
+    "baseline": {
+      "answered": 14,
+      "abstain": 8,
+      "errors": 0,
+      "search_calls": 28,
+      "prompt_tokens": 15974,
+      "completion_tokens": 1717,
+      "total_tokens": 17691
+    },
+    "selected": {
+      "answered": 14,
+      "abstain": 8,
+      "errors": 0,
+      "search_calls": 28,
+      "prompt_tokens": 15979,
+      "completion_tokens": 1694,
+      "total_tokens": 17673
+    },
+    "unanswerable_abstained": "2/2 in both; 6 answerable false-abstentions in both",
+    "note": "No dev query states Part/Appendix, so baseline and selected filters yield the same retrieval results."
+  },
+  "agent_test": {
+    "baseline": {
+      "answered": 3,
+      "abstain": 4,
+      "errors": 0,
+      "search_calls": 10,
+      "prompt_tokens": 5314,
+      "completion_tokens": 418,
+      "total_tokens": 5732
+    },
+    "selected": {
+      "answered": 4,
+      "abstain": 3,
+      "errors": 0,
+      "search_calls": 9,
+      "prompt_tokens": 4944,
+      "completion_tokens": 457,
+      "total_tokens": 5401
+    },
+    "unanswerable_abstained": "2/2 in both; preliminary audit found a wrong answer on q22 and a false abstention on q23; manual review remains pending."
+  }
 }

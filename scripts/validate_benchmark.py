@@ -1,10 +1,11 @@
-"""Validate Day 7 benchmark structure and answer evidence against chunks_B."""
 import json
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from src.filters import infer_filter
 
 
 def flat(text: str) -> str:
@@ -34,9 +35,13 @@ def validate(path: Path, expected_split: str, expected_answerable: int, expected
                     raise ValueError(f"{q['id']}: evidence not found in an exact source/page chunk")
         elif q["gold"] or not q.get("absence_reason"):
             raise ValueError(f"{q['id']}: unanswerable case needs empty gold and an absence_reason")
-        filters = q.get("filter")
-        if filters and (not isinstance(filters, dict) or any(k not in ("part", "document_id") for k in filters)):
-            raise ValueError(f"{q['id']}: unsupported metadata filter")
+        if q.get("filter"):
+            raise ValueError(f"{q['id']}: runtime filter fields are forbidden; infer only from question text")
+        expected = q.get("expected_filter")
+        if expected is not None and expected != infer_filter(q["question"]):
+            raise ValueError(f"{q['id']}: expected_filter does not match explicit query scope")
+        if q.get("oracle_filter") and expected_split != "dev":
+            raise ValueError(f"{q['id']}: oracle_filter is only allowed for historical dev annotations")
     n_answerable = sum(q["answerable"] for q in cases)
     n_unanswerable = len(cases) - n_answerable
     if (n_answerable, n_unanswerable) != (expected_answerable, expected_unanswerable):

@@ -1,4 +1,3 @@
-"""Retrieval metrics for answerable cases only, with trace output."""
 import re
 import statistics
 import sys
@@ -8,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "starter"))
 from baseline import pack_context
+from src.filters import infer_filter
 
 
 def flat(text: str) -> str:
@@ -27,7 +27,7 @@ def run(retriever, questions: list[dict], top_k: int = 3, budget: int = 800,
         raise ValueError("retrieval metrics require at least one answerable question")
     traces = []
     for question in answerable:
-        filters = question.get("filter") if use_filter else None
+        filters = infer_filter(question["question"]) if use_filter else None
         started = time.perf_counter()
         results = retriever.search(question["question"], top_k=top_k, filters=filters)
         elapsed_ms = (time.perf_counter() - started) * 1000
@@ -43,6 +43,7 @@ def run(retriever, questions: list[dict], top_k: int = 3, budget: int = 800,
         traces.append({"query_id": question["id"], "split": question["split"],
                        "question": question["question"], "strategy": retriever.name,
                        "top_k": top_k, "budget_chars": budget, "filter": filters,
+                       "filter_source": "explicit_query_scope" if filters else None,
                        "filter_compliant": filter_ok, "results": results,
                        "context": context, "context_ids": context_ids,
                        "context_chars": len(context), "elapsed_ms": round(elapsed_ms, 3),

@@ -1,4 +1,3 @@
-"""BM25 and rank fusion retrieval over the exported Day 6 chunk corpus."""
 import math
 import re
 import unicodedata

@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "starter"))
 from agentic import run_agent
 from src.agent import OpenAICompatibleController
 from src.frozen import verify_freeze
+from src.filters import infer_filter
 from src.retrievers import BM25
 
 
@@ -22,13 +23,16 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=("dev", "test"), default="dev")
     parser.add_argument("--final", action="store_true")
-    parser.add_argument("--config", choices=("bm25_baseline", "bm25_filter_selected"), default="bm25_filter_selected")
+    parser.add_argument("--config", choices=("bm25_baseline", "bm25_dev_selected"), default="bm25_dev_selected")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.split == "test":
         if not args.final:
             parser.error("test requires --final and results/freeze-config.json after config freeze")
         verify_freeze(ROOT)
+        freeze = json.loads((ROOT / "results" / "freeze-config.json").read_text(encoding="utf-8"))
+        if not freeze.get("test_eligible", True):
+            parser.error("current test split was previously inspected; create a fresh held-out test before evaluation")
     load_dotenv(ROOT / ".env")
     model = os.getenv("AGENT_MODEL", "gpt-4o-mini")
     chunks = json.loads((ROOT / "data" / "chunks_B.json").read_text(encoding="utf-8"))
@@ -40,13 +44,16 @@ def main() -> None:
         try:
             controller = OpenAICompatibleController(model=model)
             result = run_agent(case["question"], controller, retriever,
-                               filters=case.get("filter") if args.config == "bm25_filter_selected" else None,
-                               max_searches=4, top_k=3, budget=800)
+                               filters=(infer_filter(case["question"])
+                                        if args.config == "bm25_dev_selected" else None),
+                               max_searches=3, top_k=3,
+                               budget=800)
             traces.append({"query_id": case["id"], "question": case["question"],
                            "answerable": case["answerable"], **result, "model": model,
                            "total_tokens": controller.total_tokens,
                            "prompt_tokens": controller.prompt_tokens,
                            "completion_tokens": controller.completion_tokens,
+                           "retry_count": controller.retry_count,
                            "config": args.config})
         except Exception as exc:
             traces.append({"query_id": case["id"], "question": case["question"],
@@ -55,6 +62,7 @@ def main() -> None:
                            "total_tokens": controller.total_tokens if controller else 0,
                            "prompt_tokens": controller.prompt_tokens if controller else 0,
                            "completion_tokens": controller.completion_tokens if controller else 0,
+                           "retry_count": controller.retry_count if controller else 0,
                            "config": args.config})
     output = args.output or ROOT / "results" / "agent" / f"{args.split}_{args.config}.json"
     output.parent.mkdir(parents=True, exist_ok=True)

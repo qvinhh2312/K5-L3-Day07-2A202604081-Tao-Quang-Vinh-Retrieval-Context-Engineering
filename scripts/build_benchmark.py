@@ -5,11 +5,14 @@ answers and results have already been observed. New test items are authored
 here and must not be used for tuning.
 """
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 DAY6_QUESTIONS = ROOT / "data" / "benchmark_day6_seed.json"
 CHUNKS_FILE = ROOT / "data" / "chunks_B.json"
+from src.filters import infer_filter
 
 
 def exact_evidence(chunks, page, starts_with):
@@ -23,14 +26,19 @@ def exact_evidence(chunks, page, starts_with):
 
 
 def answerable_case(q, split):
-    return {
+    case = {
         "id": q["id"], "split": split, "answerable": True,
         "question": q["question"], "question_vi": q.get("question_vi"),
         "expected_answer": q["expected_answer"],
         "gold": [{"source_id": q["gold_source_id"], "page": q["gold_page"],
                   "evidence": q["evidence_quote"]}],
-        "filter": q.get("filter"), "type": q.get("type"),
+        "type": q.get("type"),
     }
+    if q.get("filter"):
+        # Historical Day 6 filters were assigned using gold pages. Preserve
+        # them as an oracle-only comparison label; runtime code must ignore it.
+        case["oracle_filter"] = q["filter"]
+    return case
 
 
 def new_case(chunks, qid, question, answer, page, prefix, split="test"):
@@ -38,12 +46,12 @@ def new_case(chunks, qid, question, answer, page, prefix, split="test"):
             "expected_answer": answer,
             "gold": [{"source_id": "nist-ai-100-1", "page": page,
                       "evidence": exact_evidence(chunks, page, prefix)}],
-            "filter": None, "type": "paraphrase"}
+            "type": "paraphrase"}
 
 
 def unanswerable(qid, split, question, reason):
     return {"id": qid, "split": split, "answerable": False, "question": question,
-            "gold": [], "absence_reason": reason, "filter": None}
+            "gold": [], "absence_reason": reason}
 
 
 def main():
@@ -85,8 +93,8 @@ def main():
                      "Which federated learning protocol does the AI RMF recommend?",
                      "Đã tìm federated learning trên toàn bộ 42 trang nội dung (0 lần); AI RMF không nêu giao thức học liên kết cụ thể."),
     ]
-    test[0]["filter"] = {"part": "part1"}
-    test[4]["filter"] = {"part": "part2"}
+    test[0]["expected_filter"] = infer_filter(test[0]["question"])
+    test[4]["expected_filter"] = infer_filter(test[4]["question"])
     for name, rows in (("benchmark_dev.json", dev), ("benchmark_test.json", test)):
         (ROOT / "data" / name).write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"{name}: {len(rows)} câu; answerable={sum(x['answerable'] for x in rows)}; unanswerable={sum(not x['answerable'] for x in rows)}")

@@ -1,4 +1,3 @@
-"""Adapter from the Day 6 pgvector index to the Day 7 retriever contract."""
 import os
 import re
 from pathlib import Path
