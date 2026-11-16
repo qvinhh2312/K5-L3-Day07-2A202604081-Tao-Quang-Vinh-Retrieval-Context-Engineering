@@ -1,0 +1,104 @@
+[
+  {
+    "id": "q21",
+    "split": "test",
+    "answerable": true,
+    "question": "Within Part 1, when measuring impacts across a population, what should analysts keep in mind about which groups may be affected and their relationship to the system?",
+    "expected_answer": "Because harms can affect groups differently, and potentially harmed communities may not be direct system users.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 11,
+        "evidence": "Approaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system."
+      }
+    ],
+    "filter": {
+      "part": "part1"
+    },
+    "type": "paraphrase"
+  },
+  {
+    "id": "q22",
+    "split": "test",
+    "answerable": true,
+    "question": "How does the AI RMF define an organization's risk tolerance?",
+    "expected_answer": "Its readiness to bear risk in order to achieve its objectives.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 12,
+        "evidence": "Risk tolerance refers to the organization’s or AI actor’s (see Appendix A) readiness to bear the risk in order to achieve its objectives."
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q23",
+    "split": "test",
+    "answerable": true,
+    "question": "Must an organization follow the four AI RMF functions in one fixed sequence?",
+    "expected_answer": "No. They may be performed in any order that adds value, and the process should be iterative.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 26,
+        "evidence": "functions may be performed in any order across the AI lifecycle as deemed to add value by a user of the framework."
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q24",
+    "split": "test",
+    "answerable": true,
+    "question": "Who can set the policies that direct an organization's mission, values, culture, and risk tolerance?",
+    "expected_answer": "Governing authorities.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 27,
+        "evidence": "Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance."
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q25",
+    "split": "test",
+    "answerable": true,
+    "question": "For the MAP 1.2 team described in Part 2, what kinds of diversity and experience should be reflected in participants?",
+    "expected_answer": "Demographic diversity and broad domain and user experience expertise.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 31,
+        "evidence": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented."
+      }
+    ],
+    "filter": {
+      "part": "part2"
+    },
+    "type": "paraphrase"
+  },
+  {
+    "id": "u-test-01",
+    "split": "test",
+    "answerable": false,
+    "question": "How many hours of red-team testing does the framework require before an AI system is released?",
+    "gold": [],
+    "absence_reason": "Đã tìm red team/red-team trên toàn bộ 42 trang nội dung (0 lần); tài liệu không đặt số giờ thử nghiệm bắt buộc.",
+    "filter": null
+  },
+  {
+    "id": "u-test-02",
+    "split": "test",
+    "answerable": false,
+    "question": "Which federated learning protocol does the AI RMF recommend?",
+    "gold": [],
+    "absence_reason": "Đã tìm federated learning trên toàn bộ 42 trang nội dung (0 lần); AI RMF không nêu giao thức học liên kết cụ thể.",
+    "filter": null
+  }
+]

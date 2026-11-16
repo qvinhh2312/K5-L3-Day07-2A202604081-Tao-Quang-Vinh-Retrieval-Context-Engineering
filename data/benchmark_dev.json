@@ -1,0 +1,370 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "answerable": true,
+    "question": "How does the AI RMF define risk?",
+    "question_vi": "AI RMF định nghĩa rủi ro như thế nào?",
+    "expected_answer": "Risk is the composite measure of an event's probability of occurring and the magnitude or degree of the consequences of that event.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 9,
+        "evidence": "risk refers to the composite measure of an event’s probability of occurring and the magnitude or degree of the consequences of the corresponding event"
+      }
+    ],
+    "filter": null,
+    "type": "truc_tiep"
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "answerable": true,
+    "question": "What are the four functions that make up the AI RMF Core?",
+    "question_vi": "Bốn chức năng của AI RMF Core là gì?",
+    "expected_answer": "GOVERN, MAP, MEASURE and MANAGE.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 25,
+        "evidence": "the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE."
+      }
+    ],
+    "filter": null,
+    "type": "truc_tiep"
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which trustworthiness characteristic is treated as a prerequisite that all the other characteristics build on?",
+    "question_vi": "Đặc tính tin cậy nào được coi là điều kiện tiên quyết làm nền cho các đặc tính còn lại?",
+    "expected_answer": "Valid and Reliable.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 17,
+        "evidence": "Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics"
+      }
+    ],
+    "filter": null,
+    "type": "dien_dat_lai"
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "answerable": true,
+    "question": "Under what circumstances should an organization stop developing or deploying an AI system because of its risk level?",
+    "question_vi": "Trong trường hợp nào tổ chức phải dừng phát triển/triển khai hệ thống AI vì mức rủi ro?",
+    "expected_answer": "When the system presents unacceptable negative risk (significant negative impacts imminent, severe harms actually occurring, or catastrophic risks present); it should cease in a safe manner until risks are sufficiently managed.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 13,
+        "evidence": "unacceptable negative risk levels – such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present – development and deployment should cease in a safe manner until risks can be sufficiently managed"
+      }
+    ],
+    "filter": null,
+    "type": "dieu_kien"
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which kinds of AI actors carry out deployment tasks?",
+    "question_vi": "Những nhóm AI actor nào thực hiện các nhiệm vụ triển khai (deployment)?",
+    "expected_answer": "System integrators, software developers, end users, operators and practitioners, evaluators, and domain experts (human factors, socio-cultural analysis, governance).",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 40,
+        "evidence": "AI actors in this category include system integrators, software developers, end users, operators and practitioners, evaluators, and domain experts with expertise in human factors, socio-cultural analysis, and governance"
+      }
+    ],
+    "filter": {
+      "part": "appendix"
+    },
+    "type": "filter"
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "answerable": true,
+    "question": "What should an organization set up to keep track of the AI systems it has, and how should that effort be resourced?",
+    "question_vi": "Tổ chức cần thiết lập gì để kiểm kê các hệ thống AI đang có, và nguồn lực nên phân bổ theo tiêu chí nào?",
+    "expected_answer": "Mechanisms to inventory AI systems, resourced according to organizational risk priorities (GOVERN 1.6).",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 28,
+        "evidence": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities."
+      }
+    ],
+    "filter": null,
+    "type": "bang"
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "answerable": true,
+    "question": "What response options are available for AI risks judged to be high priority?",
+    "question_vi": "Có những lựa chọn ứng phó nào cho các rủi ro AI được xếp ưu tiên cao?",
+    "expected_answer": "Mitigating, transferring, avoiding, or accepting (MANAGE 1.3).",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 37,
+        "evidence": "Risk response options can include mitigating, transferring, avoiding, or accepting."
+      }
+    ],
+    "filter": null,
+    "type": "bang"
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "answerable": true,
+    "question": "What should accuracy measurements always be paired with?",
+    "question_vi": "Các phép đo độ chính xác luôn phải đi kèm với gì?",
+    "expected_answer": "Clearly defined and realistic test sets representative of conditions of expected use, plus details about test methodology, included in documentation.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 19,
+        "evidence": "Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology"
+      }
+    ],
+    "filter": {
+      "part": "part1"
+    },
+    "type": "filter"
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "answerable": true,
+    "question": "What do test, evaluation, verification and validation tasks involve once an AI system is in operation?",
+    "question_vi": "Các nhiệm vụ TEVV khi hệ thống AI đang vận hành bao gồm những gì?",
+    "expected_answer": "Ongoing monitoring for periodic updates, testing and SME recalibration of models, tracking incidents or errors and their management, detecting emergent properties and impacts, and processes for redress and response.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 41,
+        "evidence": "TEVV tasks for operations involve ongoing monitoring for periodic updates, testing, and subject matter expert (SME) recalibration of models"
+      }
+    ],
+    "filter": {
+      "part": "appendix"
+    },
+    "type": "filter"
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "answerable": true,
+    "question": "How does the AI RMF describe an AI system?",
+    "question_vi": "AI RMF mô tả hệ thống AI như thế nào?",
+    "expected_answer": "An engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments, with varying levels of autonomy.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 6,
+        "evidence": "an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments"
+      }
+    ],
+    "filter": null,
+    "type": "truc_tiep"
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "answerable": true,
+    "question": "Is a system whose harmful biases have been mitigated automatically a fair system?",
+    "question_vi": "Hệ thống đã giảm thiểu thiên lệch có hại có mặc nhiên là công bằng không?",
+    "expected_answer": "No. For example, predictions balanced across demographic groups may still be inaccessible to people with disabilities, affected by the digital divide, or exacerbate existing disparities.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 22,
+        "evidence": "Systems in which harmful biases are mitigated are not necessarily fair."
+      }
+    ],
+    "filter": null,
+    "type": "dieu_kien"
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "answerable": true,
+    "question": "Why might an AI system need corrective maintenance more often than traditional software?",
+    "question_vi": "Vì sao hệ thống AI có thể cần bảo trì sửa lỗi thường xuyên hơn phần mềm truyền thống?",
+    "expected_answer": "Because of data, model, or concept drift.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 43,
+        "evidence": "AI systems may require more frequent maintenance and triggers for conducting corrective maintenance due to data, model, or concept drift."
+      }
+    ],
+    "filter": null,
+    "type": "dien_dat_lai"
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "answerable": true,
+    "question": "Does the framework impose uniform, one-size-fits-all requirements on organizations?",
+    "question_vi": "Framework có áp đặt yêu cầu đồng nhất cho mọi tổ chức không?",
+    "expected_answer": "No. It is outcome-focused and non-prescriptive, providing a catalog of outcomes and approaches.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 47,
+        "evidence": "Be outcome-focused and non-prescriptive. The Framework should provide a catalog of outcomes and approaches rather than prescribe one-size-fits-all requirements."
+      }
+    ],
+    "filter": null,
+    "type": "dien_dat_lai"
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "answerable": true,
+    "question": "How does a Current Profile differ from a Target Profile?",
+    "question_vi": "Current Profile khác Target Profile ở điểm nào?",
+    "expected_answer": "A Current Profile shows how AI is currently being managed and the related risks in terms of current outcomes; a Target Profile states the outcomes needed to reach the desired AI risk management goals.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 38,
+        "evidence": "An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals."
+      }
+    ],
+    "filter": null,
+    "type": "dien_dat_lai"
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "answerable": true,
+    "question": "What are organizational teams expected to do about documenting the risks and impacts of the AI technology they design, deploy and use?",
+    "question_vi": "Các nhóm trong tổ chức cần làm gì với việc ghi nhận rủi ro và tác động của công nghệ AI họ thiết kế, triển khai, sử dụng?",
+    "expected_answer": "Document the risks and potential impacts and communicate about the impacts more broadly (GOVERN 4.2).",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 29,
+        "evidence": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly."
+      }
+    ],
+    "filter": null,
+    "type": "bang"
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "answerable": true,
+    "question": "How does the framework distinguish security from resilience for an AI system?",
+    "question_vi": "Framework phân biệt tính bảo mật (security) và khả năng phục hồi (resilience) thế nào?",
+    "expected_answer": "Resilience is the ability to return to normal function after an unexpected adverse event; security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 20,
+        "evidence": "While resilience is the ability to return to normal function after an unexpected adverse event, security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks."
+      }
+    ],
+    "filter": null,
+    "type": "phan_biet"
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which subcategory covers evaluating fairness and bias, and what must happen with the results?",
+    "question_vi": "Subcategory nào quy định đánh giá công bằng và thiên lệch, và kết quả phải được xử lý ra sao?",
+    "expected_answer": "MEASURE 2.11: fairness and bias (as identified in the MAP function) are evaluated and the results are documented.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 35,
+        "evidence": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented."
+      }
+    ],
+    "filter": {
+      "part": "part2"
+    },
+    "type": "filter"
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "answerable": true,
+    "question": "Under what circumstances can human-AI interaction lead to more biased decisions than the AI or the human alone?",
+    "question_vi": "Trong hoàn cảnh nào tương tác người–AI có thể gây quyết định thiên lệch hơn so với riêng AI hoặc riêng con người?",
+    "expected_answer": "Under certain conditions, for example in perceptual-based judgment tasks, where the AI part of the interaction can amplify human biases.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 45,
+        "evidence": "Under certain conditions – for example, in perceptual-based judgment tasks – the AI part of the human-AI interaction can amplify human biases, leading to more biased decisions than the AI or human alone."
+      }
+    ],
+    "filter": {
+      "part": "appendix"
+    },
+    "type": "filter"
+  },
+  {
+    "id": "q19",
+    "split": "dev",
+    "answerable": true,
+    "question": "Do affected individuals and communities have to interact with the deployed AI system?",
+    "question_vi": "Cá nhân/cộng đồng bị ảnh hưởng có nhất thiết phải tương tác với hệ thống AI đang triển khai không?",
+    "expected_answer": "No. They include all individuals, groups, communities or organizations directly or indirectly affected by AI systems or decisions based on their output, and do not necessarily interact with the deployed system.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 42,
+        "evidence": "These individuals do not necessarily interact with the deployed system or application."
+      }
+    ],
+    "filter": null,
+    "type": "dieu_kien"
+  },
+  {
+    "id": "q20",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which subcategory requires channels for end users and impacted communities to report problems and appeal system outcomes?",
+    "question_vi": "Subcategory nào yêu cầu có kênh để người dùng cuối và cộng đồng bị tác động báo cáo vấn đề và khiếu nại kết quả?",
+    "expected_answer": "MEASURE 3.3: feedback processes for end users and impacted communities to report problems and appeal outcomes are established and integrated into evaluation metrics.",
+    "gold": [
+      {
+        "source_id": "nist-ai-100-1",
+        "page": 36,
+        "evidence": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics."
+      }
+    ],
+    "filter": null,
+    "type": "bang"
+  },
+  {
+    "id": "u-dev-01",
+    "split": "dev",
+    "answerable": false,
+    "question": "Which GDPR articles does the AI RMF map its privacy subcategories to?",
+    "gold": [],
+    "absence_reason": "Đã tìm GDPR trên toàn bộ 42 trang nội dung (0 lần); phần Privacy (PDF page 22) bàn về nguyên tắc và rủi ro quyền riêng tư, không nêu điều khoản GDPR.",
+    "filter": null
+  },
+  {
+    "id": "u-dev-02",
+    "split": "dev",
+    "answerable": false,
+    "question": "Which differential privacy algorithm does the AI RMF recommend for protecting training data?",
+    "gold": [],
+    "absence_reason": "Đã tìm cụm differential privacy trên toàn bộ 42 trang nội dung (0 lần); tài liệu nói về privacy-enhancing techniques nhưng không chỉ định thuật toán differential privacy.",
+    "filter": null
+  }
+]
