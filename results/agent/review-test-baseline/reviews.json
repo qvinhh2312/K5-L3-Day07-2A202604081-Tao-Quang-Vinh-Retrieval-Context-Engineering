@@ -1,0 +1,69 @@
+[
+  {
+    "query_id": "q21",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p011-c01 (PDF tr.11) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context chứa đúng câu gốc ở trang 11. Câu trả lời nêu đủ hai ý: tác hại có thể ảnh hưởng nhóm khác nhau và nhóm bị hại không nhất thiết là người dùng trực tiếp."
+  },
+  {
+    "query_id": "q22",
+    "citation_support": [],
+    "answer_grade": 0,
+    "context_grade": 0,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p042-c01, đối chiếu p012-c00 (PDF tr.42, 12) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Chunk gốc p012-c00 đứng hạng 1 nhưng context chỉ có p042-c01 (nói về bên thứ ba), không chứa định nghĩa. Agent từ chối câu có đáp án nên Answer = 0."
+  },
+  {
+    "query_id": "q23",
+    "citation_support": [],
+    "answer_grade": 0,
+    "context_grade": 0,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p025-c00, đối chiếu p026-c01 (PDF tr.25, 26) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context chỉ có p025-c00; câu 'không nhất thiết là một chuỗi có thứ tự' ở đó nói về actions, không phải bốn functions. Đoạn gốc p026-c01 không vào top-3. Từ chối câu có đáp án = 0."
+  },
+  {
+    "query_id": "q24",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p027-c01 (PDF tr.27) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context có đúng câu về governing authorities ở trang 27. Trả lời đúng đáp án; phần thêm về senior leadership có trong cùng đoạn nên không bịa."
+  },
+  {
+    "query_id": "q25",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p031-c01 (PDF tr.31) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context có nguyên MAP 1.2 ở trang 31. Trả lời đúng: đa dạng nhân khẩu học và chuyên môn rộng về lĩnh vực, trải nghiệm người dùng; ý hợp tác liên ngành cũng có trong đoạn."
+  },
+  {
+    "query_id": "u-test-01",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "ly_do_vi": "Đã tìm PDF: red team, red-teaming, hours đều 0 lần; framework mang tính tự nguyện, không quy định số giờ. Agent từ chối, không thêm khẳng định nào. Baseline: context nhặt được chỉ là đoạn về kiểm thử phần mềm ở tr.43, không có số giờ."
+  },
+  {
+    "query_id": "u-test-02",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "ly_do_vi": "Đã tìm PDF: federated learning 0 lần (chỉ có 'Federal' trong tên cơ quan). Tài liệu không nêu giao thức nào. Agent từ chối, không bịa giao thức. Baseline: context là định nghĩa AI system ở tr.6, không liên quan giao thức."
+  }
+]

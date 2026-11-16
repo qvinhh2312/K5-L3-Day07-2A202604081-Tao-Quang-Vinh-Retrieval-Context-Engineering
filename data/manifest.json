@@ -2,7 +2,7 @@
   "source_id": "nist-ai-100-1",
   "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
   "source_path_or_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
-  "local_path": "starter/data/NIST.AI.100-1.pdf",
+  "local_path": "data/NIST.AI.100-1.pdf",
   "license_or_permission": "NIST Technical Series policy: “Works authored by NIST employees are not subject to Copyright protection within the United States; foreign rights are reserved.” Source: https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications (accessed 2026-11-14). The policy notes some NIST publications may contain third-party material; attribute NIST and verify third-party notices before redistribution.",
   "version": "AI RMF 1.0, January 2023",
   "accessed_at": "2026-11-14T07:39:43+00:00",

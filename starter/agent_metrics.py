@@ -7,7 +7,7 @@ from pathlib import Path
 def aggregate(cases, traces, reviews):
     """Cases: id/answerable; traces: query_id/status/events/citations.
 
-    Reviews: query_id, answer_grade (0..2 for answerable), citation_support
+    Reviews: query_id, answer_grade/context_grade (0..2 for answerable), citation_support
     (one boolean per citation), and abstention_correct (boolean for unanswerable).
     Provider errors are excluded and reported.
     """
@@ -19,6 +19,7 @@ def aggregate(cases, traces, reviews):
     review_by_id = {r['query_id']: r for r in reviews}
     out = {'cases': len(cases), 'provider_errors': 0, 'tool_use': {'n': 0, 'N': 0},
            'grounded_answer': {'0': 0, '1': 0, '2': 0, 'N': 0, 'mean': None},
+           'context_grade': {'0': 0, '1': 0, '2': 0, 'N': 0, 'mean': None},
            'citation_validity': {'n': 0, 'N': 0}, 'answer_citation_coverage': {'n': 0, 'N': 0},
            'abstention': {'n': 0, 'N': 0}, 'false_abstention': {'n': 0, 'N': 0}}
     for case in cases:
@@ -48,9 +49,15 @@ def aggregate(cases, traces, reviews):
         if case['answerable']:
             grade = r.get('answer_grade')
             if type(grade) is not int or grade not in (0, 1, 2): raise ValueError(f'{cid}: answer_grade phải là 0, 1 hoặc 2')
+            context_grade = r.get('context_grade')
+            if context_grade is not None:
+                if type(context_grade) is not int or context_grade not in (0, 1, 2): raise ValueError(f'{cid}: context_grade phải là 0, 1 hoặc 2')
             if t['status'] == 'abstain' and grade != 0: raise ValueError(f'{cid}: abstain trên câu có đáp án phải được chấm 0')
             out['grounded_answer'][str(grade)] += 1
             out['grounded_answer']['N'] += 1
+            if context_grade is not None:
+                out['context_grade'][str(context_grade)] += 1
+                out['context_grade']['N'] += 1
             out['false_abstention']['N'] += 1
             out['false_abstention']['n'] += t['status'] == 'abstain'
         else:
@@ -63,6 +70,8 @@ def aggregate(cases, traces, reviews):
             out['abstention']['n'] += correct
     g = out['grounded_answer']
     if g['N']: g['mean'] = (g['1'] + 2*g['2']) / g['N']
+    c = out['context_grade']
+    if c['N']: c['mean'] = (c['1'] + 2*c['2']) / c['N']
     return out
 
 

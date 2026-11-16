@@ -1,0 +1,680 @@
+[
+  {
+    "query_id": "q21",
+    "question": "Within Part 1, when measuring impacts across a population, what should analysts keep in mind about which groups may be affected and their relationship to the system?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Analysts should keep in mind that contexts matter when measuring impacts across a population. They should recognize that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system [nist-ai-100-1-para-p011-c01].",
+    "citations": [
+      "nist-ai-100-1-para-p011-c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Part 1 measuring impacts across a population groups affected relationship to the system",
+        "filter": {
+          "part": "part1"
+        },
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p011-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 11,
+            "text": "Approaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system.",
+            "metadata": {
+              "part": "part1",
+              "printed_page": "6",
+              "chunk_index": 1
+            },
+            "score": 16.805167081731888,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p009-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 9,
+            "text": "Part 1: Foundational Information 1. Framing Risk AI risk management offers a path to minimize potential negative impacts of AI systems, such as threats to civil liberties and rights, while also providing opportunities to maximize positive impacts. Addressing, documenting, and managing AI risks and potential negative impacts effectively can lead to more trustworthy AI systems. 1.1 Understanding and Addressing Risks, Impacts, and Harms In the context of the AI RMF,risk refers to the composite measure of an event’s probability of occurring and the magnitude or degree of the consequences of the corresponding event.",
+            "metadata": {
+              "part": "part1",
+              "printed_page": "4",
+              "chunk_index": 0
+            },
+            "score": 7.927839967680366,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p022-c04",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 22,
+            "text": "3.7 Fair – with Harmful Bias Managed Fairness in AI includes concerns for equality and equity by addressing issues such as harmful bias and discrimination. Standards of fairness can be complex and difficult to define because perceptions of fairness differ among cultures and may shift depending on application. Organizations’ risk management efforts will be enhanced by recognizing and considering these differences. Systems in which harmful biases are mitigated are not necessarily fair. For example, systems in which predictions are somewhat balanced across demographic groups may still be inaccessible to individuals with disabilities or affected by the digital divide or may exacerbate existing disparities or systemic biases.",
+            "metadata": {
+              "part": "part1",
+              "printed_page": "17",
+              "chunk_index": 4
+            },
+            "score": 7.2462929152981435,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p011-c01"
+        ],
+        "context": "[nist-ai-100-1-para-p011-c01 | NIST.AI.100-1.pdf | page 11]\nApproaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system.",
+        "context_ids": [
+          "nist-ai-100-1-para-p011-c01"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 707,
+    "prompt_tokens": 614,
+    "completion_tokens": 93,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "q22",
+    "question": "How does the AI RMF define an organization's risk tolerance?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "The AI RMF defines an organization's risk tolerance as determined by governing authorities who establish overarching policies that guide the organization's mission, goals, values, culture, and risk tolerance. Senior leadership plays a crucial role in setting the tone for risk management and shaping the organizational culture related to risk [nist-ai-100-1-para-p027-c01].",
+    "citations": [
+      "nist-ai-100-1-para-p027-c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "organization's risk tolerance AI RMF",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p012-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 12,
+            "text": "1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization’s or AI actor’s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regulatory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level of risk that is acceptable to organizations or society are highly contextual and application and use-case specific. Risk tolerances can be influenced by policies and norms established by AI system owners, organizations, industries, communities, or policy makers. Risk tolerances are likely to change over time as AI systems, policies, and norms evolve. Different organizations may have varied risk tolerances due to their",
+            "metadata": {
+              "part": "part1",
+              "printed_page": "7",
+              "chunk_index": 0
+            },
+            "score": 11.89218116497662,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p027-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 27,
+            "text": "Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "22",
+              "chunk_index": 1
+            },
+            "score": 9.069297401607633,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p027-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 27,
+            "text": "GOVERN 1.1: Legal and regulatory requirements involving AI are understood, managed, and documented. GOVERN 1.2: The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices. GOVERN 1.3: Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance. GOVERN 1.4: The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities. Categories Subcategories Continued on next page",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "22",
+              "chunk_index": 3
+            },
+            "score": 7.716275904814612,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p027-c01"
+        ],
+        "context": "[nist-ai-100-1-para-p027-c01 | NIST.AI.100-1.pdf | page 27]\nStrong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.",
+        "context_ids": [
+          "nist-ai-100-1-para-p027-c01"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 701,
+    "prompt_tokens": 611,
+    "completion_tokens": 90,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "q23",
+    "question": "Must an organization follow the four AI RMF functions in one fixed sequence?",
+    "answerable": true,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "candidate_answer": "Không đủ bằng chứng để trả lời.",
+    "candidate_citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "four AI RMF functions sequence",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p025-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 25,
+            "text": "Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE. Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes. Actions do not constitute a checklist, nor are they necessarily an ordered set of steps.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "20",
+              "chunk_index": 0
+            },
+            "score": 9.4453537639843,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p008-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 8,
+            "text": "valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy enhanced, and fair with their harmful biases managed. Part 2 comprises the “Core” of the Framework. It describes four specific functions to help organizations address the risks of AI systems in practice. These functions – GOVERN, MAP, MEASURE, and MANAGE – are broken down further into categories and subcategories. While GOVERN applies to all stages of organizations’ AI risk management processes and procedures, the MAP, MEASURE, and MANAGE functions can be applied in AI system-specific contexts and at specific stages of the AI lifecycle. Additional resources related to the Framework are included in the AI RMF Playbook, which is available via the NIST AI RMF website:",
+            "metadata": {
+              "part": "executive_summary",
+              "printed_page": "3",
+              "chunk_index": 0
+            },
+            "score": 9.130637128710346,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p025-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 25,
+            "text": "Fig. 5. Functions organize AI risk management activities at their highest level to govern, map, measure, and manage AI risks. Governance is designed to be a cross-cutting function to inform and be infused throughout the other three functions. Risk management should be continuous, timely, and performed throughout the AI system lifecycle dimensions. AI RMF Core functions should be carried out in a way that reflects diverse and multidisciplinary perspectives, potentially including the views of AI actors outside the organization. Having a diverse team contributes to more open sharing of ideas and assumptions about purposes and functions of the technology being designed, developed,",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "20",
+              "chunk_index": 1
+            },
+            "score": 5.76377546783373,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p025-c00"
+        ],
+        "context": "[nist-ai-100-1-para-p025-c00 | NIST.AI.100-1.pdf | page 25]\nPart 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE. Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes. Actions do not constitute a checklist, nor are they necessarily an ordered set of steps.",
+        "context_ids": [
+          "nist-ai-100-1-para-p025-c00"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 665,
+    "prompt_tokens": 637,
+    "completion_tokens": 28,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "q24",
+    "question": "Who can set the policies that direct an organization's mission, values, culture, and risk tolerance?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Additionally, senior leadership sets the tone for risk management within the organization, influencing its culture [nist-ai-100-1-para-p027-c01].",
+    "citations": [
+      "nist-ai-100-1-para-p027-c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "who sets policies for organization's mission values culture risk tolerance",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p027-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 27,
+            "text": "Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "22",
+              "chunk_index": 1
+            },
+            "score": 28.919963469487467,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p012-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 12,
+            "text": "1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization’s or AI actor’s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regulatory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level of risk that is acceptable to organizations or society are highly contextual and application and use-case specific. Risk tolerances can be influenced by policies and norms established by AI system owners, organizations, industries, communities, or policy makers. Risk tolerances are likely to change over time as AI systems, policies, and norms evolve. Different organizations may have varied risk tolerances due to their",
+            "metadata": {
+              "part": "part1",
+              "printed_page": "7",
+              "chunk_index": 0
+            },
+            "score": 13.433249226495711,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p027-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 27,
+            "text": "GOVERN 1.1: Legal and regulatory requirements involving AI are understood, managed, and documented. GOVERN 1.2: The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices. GOVERN 1.3: Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance. GOVERN 1.4: The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities. Categories Subcategories Continued on next page",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "22",
+              "chunk_index": 3
+            },
+            "score": 10.915780250851526,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p027-c01"
+        ],
+        "context": "[nist-ai-100-1-para-p027-c01 | NIST.AI.100-1.pdf | page 27]\nStrong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.",
+        "context_ids": [
+          "nist-ai-100-1-para-p027-c01"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 709,
+    "prompt_tokens": 628,
+    "completion_tokens": 81,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "q25",
+    "question": "For the MAP 1.2 team described in Part 2, what kinds of diversity and experience should be reflected in participants?",
+    "answerable": true,
+    "status": "answered",
+    "answer": "The MAP 1.2 team should reflect demographic diversity and broad domain and user experience expertise among its participants. Additionally, opportunities for interdisciplinary collaboration are prioritized [nist-ai-100-1-para-p031-c01].",
+    "citations": [
+      "nist-ai-100-1-para-p031-c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "MAP 1.2 team diversity experience participants",
+        "filter": {
+          "part": "part2"
+        },
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p031-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 31,
+            "text": "MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. MAP 1.3: The organization’s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. MAP 1.5: Organizational risk tolerances are determined and documented.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "26",
+              "chunk_index": 1
+            },
+            "score": 13.419280091420433,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p028-c02",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 28,
+            "text": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle. GOVERN 3.1: Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds). GOVERN 3.2: Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems. GOVERN 4: Organizational teams are committed to a culture",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "23",
+              "chunk_index": 2
+            },
+            "score": 13.30636615216153,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p032-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 32,
+            "text": "MAP 5.1: Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented. Categories Subcategories Continued on next page",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "27",
+              "chunk_index": 3
+            },
+            "score": 7.438267576292057,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p031-c01"
+        ],
+        "context": "[nist-ai-100-1-para-p031-c01 | NIST.AI.100-1.pdf | page 31]\nMAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. MAP 1.3: The organization’s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. MAP 1.5: Organizational risk tolerances are determined and documented.",
+        "context_ids": [
+          "nist-ai-100-1-para-p031-c01"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 731,
+    "prompt_tokens": 664,
+    "completion_tokens": 67,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "u-test-01",
+    "question": "How many hours of red-team testing does the framework require before an AI system is released?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "candidate_answer": "Không đủ bằng chứng để trả lời.",
+    "candidate_citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "red-team testing hours AI system release",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p029-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 29,
+            "text": "Table 1: Categories and subcategories for the GOVERN function. (Continued) that considers and communicates AI risk. GOVERN 4.2: Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. GOVERN 4.3: Organizational practices are in place to enable AI testing, identification of incidents, and information sharing. GOVERN 5: Processes are in place for robust engagement with relevant AI actors. GOVERN 5.1: Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "24",
+              "chunk_index": 0
+            },
+            "score": 5.476264814549081,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p030-c02",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 30,
+            "text": "Implementation of this function is enhanced by incorporating perspectives from a diverse internal team and engagement with those external to the team that developed or deployed the AI system. Engagement with external collaborators, end users, potentially impacted communities, and others may vary based on the risk level of a particular AI system, the makeup of the internal team, and organizational policies. Gathering such broad perspectives can help organizations proactively prevent negative risks and develop more trustworthy AI systems by: • improving their capacity for understanding contexts; • checking their assumptions about context of use; • enabling recognition of when systems are not functional within or out of their intended context;",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "25",
+              "chunk_index": 2
+            },
+            "score": 5.448970027879695,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p043-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 43,
+            "text": "• Underdeveloped software testing standards and inability to document AI-based practices to the standard expected of traditionally engineered software for all but the simplest of cases. • Difficulty in performing regular AI-based software testing, or determining what to test, since AI systems are not subject to the same controls as traditional code development.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "38",
+              "chunk_index": 3
+            },
+            "score": 4.679357661749069,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p043-c03"
+        ],
+        "context": "[nist-ai-100-1-para-p043-c03 | NIST.AI.100-1.pdf | page 43]\n• Underdeveloped software testing standards and inability to document AI-based practices to the standard expected of traditionally engineered software for all but the simplest of cases. • Difficulty in performing regular AI-based software testing, or determining what to test, since AI systems are not subject to the same controls as traditional code development.",
+        "context_ids": [
+          "nist-ai-100-1-para-p043-c03"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "red-team testing hours requirement AI system release",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p041-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 41,
+            "text": "and validation tasks are distinct from those who perform test and evaluation actions. Tasks can be incorporated into a phase as early as design, where tests are planned in accordance with the design requirement. • TEVV tasks for design, planning, and data may center on internal and external validation of assumptions for system design, data collection, and measurements relative to the intended context of deployment or application. • TEVV tasks for development (i.e., model building) include model validation and assessment. • TEVV tasks for deployment include system validation and integration in production, with testing, and recalibration for systems and process integration, user experience, and compliance with existing legal, regulatory, and ethical specifications.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "36",
+              "chunk_index": 0
+            },
+            "score": 7.1599781003149365,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p027-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 27,
+            "text": "GOVERN is a cross-cutting function that is infused throughout AI risk management and enables the other functions of the process. Aspects of GOVERN, especially those related to compliance or evaluation, should be integrated into each of the other functions. Attention to governance is a continual and intrinsic requirement for effective AI risk management over an AI system’s lifespan and the organization’s hierarchy.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "22",
+              "chunk_index": 0
+            },
+            "score": 5.693284213501291,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p029-c00",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 29,
+            "text": "Table 1: Categories and subcategories for the GOVERN function. (Continued) that considers and communicates AI risk. GOVERN 4.2: Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. GOVERN 4.3: Organizational practices are in place to enable AI testing, identification of incidents, and information sharing. GOVERN 5: Processes are in place for robust engagement with relevant AI actors. GOVERN 5.1: Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
+            "metadata": {
+              "part": "part2",
+              "printed_page": "24",
+              "chunk_index": 0
+            },
+            "score": 5.476264814549081,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [],
+        "context": "[nist-ai-100-1-para-p043-c03 | NIST.AI.100-1.pdf | page 43]\n• Underdeveloped software testing standards and inability to document AI-based practices to the standard expected of traditionally engineered software for all but the simplest of cases. • Difficulty in performing regular AI-based software testing, or determining what to test, since AI systems are not subject to the same controls as traditional code development.",
+        "context_ids": [
+          "nist-ai-100-1-para-p043-c03"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 946,
+    "prompt_tokens": 897,
+    "completion_tokens": 49,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  },
+  {
+    "query_id": "u-test-02",
+    "question": "Which federated learning protocol does the AI RMF recommend?",
+    "answerable": false,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "candidate_answer": "Không đủ bằng chứng để trả lời.",
+    "candidate_citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "federated learning protocol AI RMF recommendation",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p006-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 6,
+            "text": "as an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
+            "metadata": {
+              "part": "executive_summary",
+              "printed_page": "1",
+              "chunk_index": 1
+            },
+            "score": 5.401458581581903,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p044-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 44,
+            "text": "• adequately manage the problem of harmful bias in AI systems; • confront the challenging risks related to generative AI; • comprehensively address security concerns related to evasion, model extraction, membership inference, availability, or other machine learning attacks; • account for the complex attack surface of AI systems or other security abuses enabled by AI systems; and • consider risks associated with third-party AI technologies, transfer learning, and offlabel use where AI systems may be trained for decision-making outside an organization’s security controls or trained in one domain and then “fine-tuned” for another. Both AI and traditional software technologies and systems are subject to rapid innovation.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "39",
+              "chunk_index": 3
+            },
+            "score": 5.159242943432312,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p040-c02",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 40,
+            "text": "2. AI Development actors provide the initial infrastructure of AI systems and are responsible for model building and interpretation tasks, which involve the creation, selection, calibration, training, and/or testing of models or algorithms. AI actors in this category include machine learning experts, data scientists, developers, third-party entities, legal and privacy governance experts, and experts in the socio-cultural and contextual factors associated with the deployment setting.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "35",
+              "chunk_index": 2
+            },
+            "score": 4.412518377422819,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [
+          "nist-ai-100-1-para-p006-c01"
+        ],
+        "context": "[nist-ai-100-1-para-p006-c01 | NIST.AI.100-1.pdf | page 6]\nas an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
+        "context_ids": [
+          "nist-ai-100-1-para-p006-c01"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "federated learning protocol recommendation",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist-ai-100-1-para-p006-c01",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 6,
+            "text": "as an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
+            "metadata": {
+              "part": "executive_summary",
+              "printed_page": "1",
+              "chunk_index": 1
+            },
+            "score": 5.309077940018934,
+            "strategy": "bm25",
+            "rank": 1
+          },
+          {
+            "id": "nist-ai-100-1-para-p044-c03",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 44,
+            "text": "• adequately manage the problem of harmful bias in AI systems; • confront the challenging risks related to generative AI; • comprehensively address security concerns related to evasion, model extraction, membership inference, availability, or other machine learning attacks; • account for the complex attack surface of AI systems or other security abuses enabled by AI systems; and • consider risks associated with third-party AI technologies, transfer learning, and offlabel use where AI systems may be trained for decision-making outside an organization’s security controls or trained in one domain and then “fine-tuned” for another. Both AI and traditional software technologies and systems are subject to rapid innovation.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "39",
+              "chunk_index": 3
+            },
+            "score": 5.0498782359183965,
+            "strategy": "bm25",
+            "rank": 2
+          },
+          {
+            "id": "nist-ai-100-1-para-p040-c02",
+            "source_id": "nist-ai-100-1",
+            "source": "NIST.AI.100-1.pdf",
+            "page": 40,
+            "text": "2. AI Development actors provide the initial infrastructure of AI systems and are responsible for model building and interpretation tasks, which involve the creation, selection, calibration, training, and/or testing of models or algorithms. AI actors in this category include machine learning experts, data scientists, developers, third-party entities, legal and privacy governance experts, and experts in the socio-cultural and contextual factors associated with the deployment setting.",
+            "metadata": {
+              "part": "appendix",
+              "printed_page": "35",
+              "chunk_index": 2
+            },
+            "score": 4.3150512456841055,
+            "strategy": "bm25",
+            "rank": 3
+          }
+        ],
+        "new_context_ids": [],
+        "context": "[nist-ai-100-1-para-p006-c01 | NIST.AI.100-1.pdf | page 6]\nas an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022).",
+        "context_ids": [
+          "nist-ai-100-1-para-p006-c01"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "model": "gpt-4o-mini",
+    "total_tokens": 942,
+    "prompt_tokens": 893,
+    "completion_tokens": 49,
+    "retry_count": 0,
+    "config": "bm25_dev_selected"
+  }
+]

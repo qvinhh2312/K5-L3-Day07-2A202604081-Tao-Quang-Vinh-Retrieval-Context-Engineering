@@ -1,0 +1,71 @@
+[
+  {
+    "query_id": "q21",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p011-c01 (PDF tr.11) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context chứa đúng câu gốc ở trang 11 (bộ lọc part1 không đổi kết quả). Trả lời đủ hai ý, đúng với đoạn trích; citation p011-c01 hỗ trợ trực tiếp."
+  },
+  {
+    "query_id": "q22",
+    "citation_support": [
+      false
+    ],
+    "answer_grade": 0,
+    "context_grade": 0,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p027-c01, đối chiếu p012-c00 (PDF tr.27, 12) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context chỉ có p027-c01, đoạn này nói cơ quan quản trị đặt chính sách chứ không định nghĩa risk tolerance. Agent trả lời sai là định nghĩa; định nghĩa đúng ở p012-c00 không vào context."
+  },
+  {
+    "query_id": "q23",
+    "citation_support": [],
+    "answer_grade": 0,
+    "context_grade": 0,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p025-c00, đối chiếu p026-c01 (PDF tr.25, 26) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Giống baseline: cùng query, cùng top-3, context chỉ có p025-c00 và thiếu p026-c01 (functions có thể thực hiện theo thứ tự bất kỳ, quá trình lặp). Từ chối câu có đáp án nên Answer = 0."
+  },
+  {
+    "query_id": "q24",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p027-c01 (PDF tr.27) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context có đúng câu về governing authorities ở trang 27. Trả lời đúng và đủ; câu thêm về senior leadership được chính đoạn trích hỗ trợ."
+  },
+  {
+    "query_id": "q25",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã đọc chunk p031-c01 (PDF tr.31) và đối chiếu PDF gốc; chấm ngày 16/11/2026",
+    "ly_do_vi": "Context có nguyên MAP 1.2 ở trang 31 (filter part2 đúng). Trả lời đúng và đủ, citation p031-c01 hỗ trợ trực tiếp cả ý phụ về hợp tác liên ngành."
+  },
+  {
+    "query_id": "u-test-01",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "ly_do_vi": "Đã tìm PDF: red team, red-teaming, hours đều 0 lần; framework mang tính tự nguyện, không quy định số giờ. Agent từ chối, không thêm khẳng định nào. Selected: cùng query và cùng context (tr.43) như baseline, vẫn từ chối đúng."
+  },
+  {
+    "query_id": "u-test-02",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reviewer": "Tào Quang Vinh",
+    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "ly_do_vi": "Đã tìm PDF: federated learning 0 lần (chỉ có 'Federal' trong tên cơ quan). Tài liệu không nêu giao thức nào. Agent từ chối, không bịa giao thức. Selected: không có filter nào được áp dụng, kết quả giống baseline và vẫn từ chối đúng."
+  }
+]
