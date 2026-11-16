@@ -11,7 +11,7 @@
 - **Freeze:** Hash benchmark trong `results/freeze-config.json`: dev `345b0f408781ba5eace469b07b81fa844ef1b50ada3c129178aeb8c0f3d26f10`; test `4920072c4fb9bca6e09c55d6209264e64e79b5b59127f7f98123dfd0dd035e00`. Đã xác minh hash byte thô trong Git index khớp hai giá trị này sau khi loại trừ chuyển đổi line ending cho benchmark trong `.gitattributes`.
 - **Thời điểm đóng băng:** Nội dung benchmark và hash được ghi trước lần chạy test. Commit benchmark `576164c` được tạo sau lần chạy test vì lần thử commit đầu bị chặn quyền ghi `.git`; giữ nguyên ghi chú này. Test chỉ dùng so sánh baseline với cấu hình đã chọn, không dùng để chỉnh cấu hình.
 - **Đối chiếu PDF:** Đã đối chiếu các trang gold 11, 12, 26, 27 và 31 với q21–q25; các đoạn evidence và đáp án mong đợi khớp nội dung nguồn, chưa phát hiện lỗi benchmark. Tìm toàn văn không thấy các cụm GDPR, differential privacy, federated learning, red-team/red team hoặc yêu cầu số giờ kiểm thử. Phiếu review đã được tác giả đọc và xác nhận; ô xác nhận trong sổ AI về toàn bộ câu benchmark, gồm cả hai tuyên bố thiếu evidence ở dev, vẫn để trống.
-- **Giới hạn benchmark:** Một tài liệu duy nhất nên dev và test cùng chủ đề; test có 5 câu có đáp án nên lệch một câu tương đương 20%. Câu q21–q25 và các câu thiếu evidence là bản nháp có AI hỗ trợ, cần tác giả tự xác nhận trước khi nộp.
+- **Giới hạn benchmark:** Một tài liệu duy nhất nên dev và test cùng chủ đề; test có 5 câu có đáp án nên lệch một câu tương đương 20%. Câu q21–q25 và các câu thiếu evidence là bản nháp có AI hỗ trợ; tác giả ghi nhận đã tự đọc PDF và xác nhận câu hỏi, đáp án cùng các tuyên bố thiếu evidence ngày 16/11/2026 (xem `Phieu_cham_tay_Day7.md`).
 
 ## 2. Retrieval và lựa chọn cấu hình
 
@@ -95,6 +95,6 @@ Mô hình chạy qua OpenRouter là `gpt-4o-mini`. Chi phí ước tính dùng m
 - `python -m src.run_retrieval --split dev` chạy các phương pháp và ablation. PostgreSQL dùng exact scan, không có ANN.
 - Embedding bị giới hạn 256 token trong khi chunk B dài tối đa 799 ký tự; một số đoạn có thể bị cắt khi embed. BM25, TF-IDF và dense dùng tokenization/thang điểm khác nhau; RRF chỉ hợp nhất thứ hạng.
 - Thời gian một lượt và cỡ mẫu nhỏ không đại diện corpus khác. Không có OCR hoặc benchmark riêng cho bảng/ảnh; corpus chỉ có một tài liệu văn bản.
-- Test retrieval đã được xem trước khi sửa agent; các sửa đổi controller chỉ dựa trên dev. Các câu q21–q25 và các câu thiếu evidence là bản nháp có AI hỗ trợ. Tác giả cần ghi ngày sau khi tự đọc PDF xác nhận benchmark.
+- Test retrieval đã được xem trước khi sửa agent; các sửa đổi controller chỉ dựa trên dev. Các câu q21–q25 và các câu thiếu evidence là bản nháp có AI hỗ trợ; tác giả đã ghi ngày tự xác nhận benchmark trong `Phieu_cham_tay_Day7.md`.
 - Rà soát không phát hiện câu hỏi hoặc đáp án gold sai. q22: chunk gold `p012-c00` bị cắt sau cụm “varied risk tolerances due to their”; câu định nghĩa risk tolerance vẫn đầy đủ trong chunk. q23: đáp án mong đợi là paraphrase và không nêu thêm trình tự thường dùng sau GOVERN; điều này không làm sai đáp án cho câu hỏi về việc có bắt buộc một thứ tự cố định hay không. Không sửa benchmark sau lần chạy test.
 - Khi `repeated_query_blocked` xảy ra, agent dừng ngay và không cho model cơ hội trả lời từ context đã có (q06 và q07 trên dev). Đây là hướng cải thiện tiếp theo; không đổi trong repo hiện tại vì test đã chạy.
