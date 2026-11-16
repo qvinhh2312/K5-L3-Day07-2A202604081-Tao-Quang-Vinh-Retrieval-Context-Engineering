@@ -1,6 +1,6 @@
 # Phiếu chấm tay Day 7 — tài liệu để TỰ đọc và TỰ đánh giá
 
-Tài liệu này chỉ gồm **bằng chứng thô**: câu hỏi, đoạn gốc từ PDF, context mà model đã thấy, câu trả lời của agent, và số liệu do chương trình đo. **Không có điểm, nhận xét hay gợi ý đáp án do AI viết.** Mọi ô `___` do bạn điền.
+Câu hỏi và đáp án benchmark có AI hỗ trợ soạn bản nháp. Người học đã tự đối chiếu PDF và ghi xác nhận trong phiếu; các điểm review agent được lưu riêng trong `results/agent/review-test-baseline/` và `results/agent/review-test-selected/`.
 
 ## Thang điểm (theo RUBRIC/BENCHMARK của đề)
 
@@ -19,7 +19,6 @@ Quy trình gợi ý cho mỗi câu: (1) đọc câu hỏi, (2) đọc đoạn g�
 
 Với mỗi câu, tự kiểm tra: đáp án mong đợi có đúng với đoạn gốc không? Câu hỏi có hiểu được độc lập không? Có chép nguyên văn từ tài liệu không?
 
-
 ## q21
 
 **Câu hỏi:** Within Part 1, when measuring impacts across a population, what should analysts keep in mind about which groups may be affected and their relationship to the system?
@@ -32,7 +31,7 @@ Với mỗi câu, tự kiểm tra: đáp án mong đợi có đúng với đoạ
 
 > Approaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system.
 
-Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ ràng   ☐ không chép nguyên văn   Ghi chú: ______________________
+Bạn xác nhận: ☒ đáp án đúng với đoạn gốc   ☒ câu hỏi rõ ràng   ☒ không chép nguyên văn   Ghi chú: Đối chiếu PDF trang 11: câu gốc khớp đáp án; câu hỏi nêu rõ Part 1 nên hiểu độc lập; đáp án là diễn đạt lại, không chép nguyên văn.
 
 
 ## q22
@@ -47,7 +46,7 @@ Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ
 
 > 1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization’s or AI actor’s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regulatory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level of risk that is acceptable to organizations or society are highly contextual and application and use-case specific. Risk tolerances can be influenced by policies and norms established by AI system owners, organizations, industries, communities, or policy makers. Risk tolerances are likely to change over time as AI systems, policies, and norms evolve. Different organizations may have varied risk tolerances due to their
 
-Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ ràng   ☐ không chép nguyên văn   Ghi chú: ______________________
+Bạn xác nhận: ☒ đáp án đúng với đoạn gốc   ☒ câu hỏi rõ ràng   ☒ không chép nguyên văn   Ghi chú: Đối chiếu PDF trang 12: câu định nghĩa khớp đáp án. Chunk bị cắt sau “due to their” nhưng định nghĩa vẫn đủ; đáp án là diễn đạt lại.
 
 
 ## q23
@@ -62,7 +61,7 @@ Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ
 
 > Framework users may apply these functions as best suits their needs for managing AI risks based on their resources and capabilities. Some organizations may choose to select from among the categories and subcategories; others may choose and have the capacity to apply all categories and subcategories. Assuming a governance structure is in place, functions may be performed in any order across the AI lifecycle as deemed to add value by a user of the framework. After instituting the outcomes in GOVERN, most users of the AI RMF would start with the MAP function and continue to MEASURE or MANAGE. However users integrate the functions, the process should be iterative, with cross-referencing between functions as necessary. Similarly, there are categories and subcategories with elements that
 
-Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ ràng   ☐ không chép nguyên văn   Ghi chú: ______________________
+Bạn xác nhận: ☒ đáp án đúng với đoạn gốc   ☒ câu hỏi rõ ràng   ☒ không chép nguyên văn   Ghi chú: Đối chiếu PDF trang 26: “any order… iterative” khớp đáp án. Đáp án bỏ ý “most users would start with MAP” nhưng không làm sai câu trả lời.
 
 
 ## q24
@@ -77,7 +76,7 @@ Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ
 
 > Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.
 
-Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ ràng   ☐ không chép nguyên văn   Ghi chú: ______________________
+Bạn xác nhận: ☒ đáp án đúng với đoạn gốc   ☒ câu hỏi rõ ràng   ☒ không chép nguyên văn   Ghi chú: Đối chiếu PDF trang 27: governing authorities khớp đáp án; câu hỏi rõ; đáp án ngắn, không chép nguyên văn.
 
 
 ## q25
@@ -92,7 +91,7 @@ Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ
 
 > MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. MAP 1.3: The organization’s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. MAP 1.5: Organizational risk tolerances are determined and documented.
 
-Bạn xác nhận: ☐ đáp án đúng với đoạn gốc   ☐ câu hỏi rõ ràng   ☐ không chép nguyên văn   Ghi chú: ______________________
+Bạn xác nhận: ☒ đáp án đúng với đoạn gốc   ☒ câu hỏi rõ ràng   ☒ không chép nguyên văn   Ghi chú: Đối chiếu PDF trang 31: MAP 1.2 khớp đáp án; câu hỏi nêu rõ Part 2 và MAP 1.2; đáp án là diễn đạt lại.
 
 
 ---
@@ -117,7 +116,7 @@ Việc bạn cần làm: mở PDF, tìm từ khóa, và đọc phần gần ch�
 
 - `nist-ai-100-1-para-p025-c00` (trang 25): Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illustrated in Figure 5, the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE. Each of these high-level functions is broken down into categories and subcategories. Categories and subcategories are subdivided into specific actions and outcomes. Actions do not constitute a checklist, nor are they necessarily an ordered set of steps.
 
-Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: ______   Ghi chú: ______________________
+Kết luận của bạn sau khi đọc PDF: ☒ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: trang 8, 22, 25, 44   Ghi chú: Đọc trang 8, 22, 25, 44 (mục Privacy-Enhanced ở trang 22). Tìm toàn PDF: GDPR, General Data Protection, Article đều 0 lần.
 
 
 ## u-dev-02 (dev)
@@ -136,7 +135,7 @@ Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời 
 
 - `nist-ai-100-1-para-p021-c02` (trang 21): Measures to enhance transparency and accountability should also consider the impact of these efforts on the implementing entity, including the level of necessary resources and the need to safeguard proprietary information. Maintaining the provenance of training data and supporting attribution of the AI system’s decisions to subsets of training data can assist with both transparency and accountability. Training data may also be subject to copyright and should follow applicable intellectual property rights laws. As transparency tools for AI systems and related documentation continue to evolve, developers of AI systems are encouraged to test different types of transparency tools in cooperation with AI deployers to ensure that AI systems are used as intended.
 
-Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: ______   Ghi chú: ______________________
+Kết luận của bạn sau khi đọc PDF: ☒ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: trang 13, 17, 21, 22, 40   Ghi chú: Đọc trang 13, 21, 22, 40. Tìm toàn PDF: differential privacy 0 lần; privacy-enhancing xuất hiện ở trang 17 và 22 nhưng không nêu thuật toán.
 
 
 ## u-test-01 (test)
@@ -155,7 +154,7 @@ Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời 
 
 - `nist-ai-100-1-para-p007-c02` (trang 7): As directed by the National Artificial Intelligence Initiative Act of 2020 (P.L. 116-283), the goal of the AI RMF is to offer a resource to the organizations designing, developing, deploying, or using AI systems to help manage the many risks of AI and promote trustworthy and responsible development and use of AI systems. The Framework is intended to be voluntary, rights-preserving, non-sector-specific, and use-case agnostic, providing flexibility to organizations of all sizes and in all sectors and throughout society to implement the approaches in the Framework.
 
-Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: ______   Ghi chú: ______________________
+Kết luận của bạn sau khi đọc PDF: ☒ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: trang 7, 43, 44   Ghi chú: Đọc trang 7, 43, 44. Tìm toàn PDF: red team, red-teaming, hours đều 0 lần; framework tự nguyện, không đặt số giờ.
 
 
 ## u-test-02 (test)
@@ -174,7 +173,7 @@ Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời 
 
 - `nist-ai-100-1-para-p043-c00` (trang 43): Appendix B: How AI Risks Differ from Traditional Software Risks As with traditional software, risks from AI-based technology can be bigger than an enterprise, span organizations, and lead to societal impacts. AI systems also bring a set of risks that are not comprehensively addressed by current risk frameworks and approaches. Some AI system features that present risks also can be beneficial. For example, pre-trained models and transfer learning can advance research and increase accuracy and resilience when compared to other models and approaches. Identifying contextual factors in theMAP function will assist AI actors in determining the level of risk and potential management efforts. Compared to traditional software, AI-specific risks that are new or increased include the following:
 
-Kết luận của bạn sau khi đọc PDF: ☐ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: ______   Ghi chú: ______________________
+Kết luận của bạn sau khi đọc PDF: ☒ tài liệu không trả lời được   ☐ tài liệu có trả lời (câu này phải sửa)   Đã đọc phần/trang: trang 40, 43, 44   Ghi chú: Đọc trang 40, 43, 44. Tìm toàn PDF: federated 0 lần (chỉ có “Federal” ở trang 8); không có giao thức nào được khuyến nghị.
 
 
 ---
@@ -211,9 +210,9 @@ Approaches for measuring impacts on a population work best if they recognize tha
 *Đoạn được trích `nist-ai-100-1-para-p011-c01` (trang 11):*
 > Approaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context chứa đúng câu gốc ở trang 11. Câu trả lời nêu đủ hai ý: tác hại có thể ảnh hưởng nhóm khác nhau và nhóm bị hại không nhất thiết là người dùng trực tiếp.
 
 
 ### q21 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -237,9 +236,9 @@ Approaches for measuring impacts on a population work best if they recognize tha
 *Đoạn được trích `nist-ai-100-1-para-p011-c01` (trang 11):*
 > Approaches for measuring impacts on a population work best if they recognize that contexts matter, that harms may affect varied groups or sub-groups differently, and that communities or other sub-groups who may be harmed are not always direct users of a system.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context chứa đúng câu gốc ở trang 11 (bộ lọc part1 không đổi kết quả). Trả lời đủ hai ý, đúng với đoạn trích; citation p011-c01 hỗ trợ trực tiếp.
 
 
 ## q22 — câu có đáp án
@@ -271,9 +270,9 @@ Additional AI Actors Third-party entities include providers, developers, vendors
 
 **Citations:** []
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 0   Answer = 0   Citation support (từng citation: true/false) = không có citation
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Chunk gốc p012-c00 đứng hạng 1 nhưng context chỉ có p042-c01 (nói về bên thứ ba), không chứa định nghĩa. Agent từ chối câu có đáp án nên Answer = 0.
 
 
 ### q22 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -297,9 +296,9 @@ Strong governance can drive and enhance internal practices and norms to facilita
 *Đoạn được trích `nist-ai-100-1-para-p027-c01` (trang 27):*
 > Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 0   Answer = 0   Citation support (từng citation: true/false) = false
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context chỉ có p027-c01, đoạn này nói cơ quan quản trị đặt chính sách chứ không định nghĩa risk tolerance. Agent trả lời sai là định nghĩa; định nghĩa đúng ở p012-c00 không vào context.
 
 
 ## q23 — câu có đáp án
@@ -331,9 +330,9 @@ Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and a
 
 **Citations:** []
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 0   Answer = 0   Citation support (từng citation: true/false) = không có citation
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context chỉ có p025-c00; câu 'không nhất thiết là một chuỗi có thứ tự' ở đó nói về actions, không phải bốn functions. Đoạn gốc p026-c01 không vào top-3. Từ chối câu có đáp án = 0.
 
 
 ### q23 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -356,9 +355,9 @@ Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and a
 
 **Citations:** []
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 0   Answer = 0   Citation support (từng citation: true/false) = không có citation
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Giống baseline: cùng query, cùng top-3, context chỉ có p025-c00 và thiếu p026-c01 (functions có thể thực hiện theo thứ tự bất kỳ, quá trình lặp). Từ chối câu có đáp án nên Answer = 0.
 
 
 ## q24 — câu có đáp án
@@ -391,9 +390,9 @@ Strong governance can drive and enhance internal practices and norms to facilita
 *Đoạn được trích `nist-ai-100-1-para-p027-c01` (trang 27):*
 > Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context có đúng câu về governing authorities ở trang 27. Trả lời đúng đáp án; phần thêm về senior leadership có trong cùng đoạn nên không bịa.
 
 
 ### q24 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -417,9 +416,9 @@ Strong governance can drive and enhance internal practices and norms to facilita
 *Đoạn được trích `nist-ai-100-1-para-p027-c01` (trang 27):*
 > Strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture. Governing authorities can determine the overarching policies that direct an organization’s mission, goals, values, culture, and risk tolerance. Senior leadership sets the tone for risk management within an organization, and with it, organizational culture. Management aligns the technical aspects of AI risk management to policies and operations. Documentation can enhance transparency, improve human review processes, and bolster accountability in AI system teams.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context có đúng câu về governing authorities ở trang 27. Trả lời đúng và đủ; câu thêm về senior leadership được chính đoạn trích hỗ trợ.
 
 
 ## q25 — câu có đáp án
@@ -452,9 +451,9 @@ MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for e
 *Đoạn được trích `nist-ai-100-1-para-p031-c01` (trang 31):*
 > MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. MAP 1.3: The organization’s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. MAP 1.5: Organizational risk tolerances are determined and documented.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context có nguyên MAP 1.2 ở trang 31. Trả lời đúng: đa dạng nhân khẩu học và chuyên môn rộng về lĩnh vực, trải nghiệm người dùng; ý hợp tác liên ngành cũng có trong đoạn.
 
 
 ### q25 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -478,9 +477,9 @@ MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for e
 *Đoạn được trích `nist-ai-100-1-para-p031-c01` (trang 31):*
 > MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized. MAP 1.3: The organization’s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated. MAP 1.5: Organizational risk tolerances are determined and documented.
 
-**Bạn chấm:**  Context = ___   Answer = ___   Citation support (từng citation: true/false) = ___
+**Bạn chấm:**  Context = 2   Answer = 2   Citation support (từng citation: true/false) = true
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Context có nguyên MAP 1.2 ở trang 31 (filter part2 đúng). Trả lời đúng và đủ, citation p031-c01 hỗ trợ trực tiếp cả ý phụ về hợp tác liên ngành.
 
 
 ## u-test-01 — câu thiếu evidence
@@ -507,9 +506,9 @@ MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for e
 
 **Citations:** []
 
-**Bạn chấm:**  Từ chối đúng và không bịa = ☐ có  ☐ không
+**Bạn chấm:**  Từ chối đúng và không bịa = ☒ có  ☐ không
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Đã tìm PDF: red team, red-teaming, hours đều 0 lần; framework mang tính tự nguyện, không quy định số giờ. Agent từ chối, không thêm khẳng định nào. Baseline: context nhặt được chỉ là đoạn về kiểm thử phần mềm ở tr.43, không có số giờ.
 
 
 ### u-test-01 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -531,9 +530,9 @@ MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for e
 
 **Citations:** []
 
-**Bạn chấm:**  Từ chối đúng và không bịa = ☐ có  ☐ không
+**Bạn chấm:**  Từ chối đúng và không bịa = ☒ có  ☐ không
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Đã tìm PDF: red team, red-teaming, hours đều 0 lần; framework mang tính tự nguyện, không quy định số giờ. Agent từ chối, không thêm khẳng định nào. Selected: cùng query và cùng context (tr.43) như baseline, vẫn từ chối đúng.
 
 
 ## u-test-02 — câu thiếu evidence
@@ -560,9 +559,9 @@ as an engineered or machine-based system that can, for a given set of objectives
 
 **Citations:** []
 
-**Bạn chấm:**  Từ chối đúng và không bịa = ☐ có  ☐ không
+**Bạn chấm:**  Từ chối đúng và không bịa = ☒ có  ☐ không
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Đã tìm PDF: federated learning 0 lần (chỉ có 'Federal' trong tên cơ quan). Tài liệu không nêu giao thức nào. Agent từ chối, không bịa giao thức. Baseline: context là định nghĩa AI system ở tr.6, không liên quan giao thức.
 
 
 ### u-test-02 · SELECTED (BM25 + filter suy từ câu hỏi)
@@ -584,9 +583,9 @@ as an engineered or machine-based system that can, for a given set of objectives
 
 **Citations:** []
 
-**Bạn chấm:**  Từ chối đúng và không bịa = ☐ có  ☐ không
+**Bạn chấm:**  Từ chối đúng và không bịa = ☒ có  ☐ không
 
-**Lý do (tiếng Việt, lời của bạn):** __________________________________________
+**Lý do (tiếng Việt, lời của bạn):** Đã tìm PDF: federated learning 0 lần (chỉ có 'Federal' trong tên cơ quan). Tài liệu không nêu giao thức nào. Agent từ chối, không bịa giao thức. Selected: không có filter nào được áp dụng, kết quả giống baseline và vẫn từ chối đúng.
 
 
 ---

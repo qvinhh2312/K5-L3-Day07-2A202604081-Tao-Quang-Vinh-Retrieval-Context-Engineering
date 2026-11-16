@@ -55,7 +55,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "reviewer": "Tào Quang Vinh",
-    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "review_basis": "Đã tìm từ khóa trên toàn bộ PDF và đọc trang 7, 43, 44; chấm ngày 16/11/2026",
     "ly_do_vi": "Đã tìm PDF: red team, red-teaming, hours đều 0 lần; framework mang tính tự nguyện, không quy định số giờ. Agent từ chối, không thêm khẳng định nào. Baseline: context nhặt được chỉ là đoạn về kiểm thử phần mềm ở tr.43, không có số giờ."
   },
   {
@@ -63,7 +63,7 @@
     "citation_support": [],
     "abstention_correct": true,
     "reviewer": "Tào Quang Vinh",
-    "review_basis": "Đã tìm từ khóa và đọc PDF gốc, trang 7-8, 22, 25-26; chấm ngày 16/11/2026",
+    "review_basis": "Đã tìm từ khóa trên toàn bộ PDF và đọc trang 40, 43, 44; chấm ngày 16/11/2026",
     "ly_do_vi": "Đã tìm PDF: federated learning 0 lần (chỉ có 'Federal' trong tên cơ quan). Tài liệu không nêu giao thức nào. Agent từ chối, không bịa giao thức. Baseline: context là định nghĩa AI system ở tr.6, không liên quan giao thức."
   }
 ]
